@@ -9,7 +9,7 @@ covid19_assertions_asset = context.get_datasource("bq_austin").get_asset(
 )
 covid19_assertions_request = covid19_assertions_asset.build_batch_request()
 
-# # Get validator from the suite
+# Get validator from the suite
 covid19_assertions_validator = context.get_validator(
     batch_request=covid19_assertions_request,
     expectation_suite_name="covid19_assertions_suite",
