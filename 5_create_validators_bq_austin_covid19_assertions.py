@@ -1,13 +1,13 @@
 import great_expectations as gx
 
-# Create the context including the context folder locally
+# Get the context from local file
 context = gx.get_context()
 
 
-covid10_assertions_asset = context.get_datasource("bq_austin").get_asset(
+covid19_assertions_asset = context.get_datasource("bq_austin").get_asset(
     "covid19_assertions"
 )
-covid19_assertions_request = covid10_assertions_asset.build_batch_request()
+covid19_assertions_request = covid19_assertions_asset.build_batch_request()
 
 # # Get validator from the suite
 covid19_assertions_validator = context.get_validator(

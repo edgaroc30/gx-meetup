@@ -1,6 +1,6 @@
 import great_expectations as gx
 
-# Create the context including the context folder locally
+# Get the context from local file
 context = gx.get_context()
 
 bq_datasource = context.datasources["bq_austin"]
